@@ -1,0 +1,92 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 1 scroll
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 1ooo</ion-title>
+    </ion-toolbar>
+  </ion-header>
+{{this.error}}
+<ion-button (click)="goback()">go back</ion-button>
+
+  <ion-button (click)="takePicture()">takepicture</ion-button>
+  <ion-button (click)="galary()">galary</ion-button> <br>
+  <div style="margin: 30px 100px; line-height: initial; ">
+  
+  <!-- <swiper [config]="config">
+    <img src="{{this.myUrL}}" alt="" srcset="">
+  </swiper> -->
+  <swiper [config]="config" #swiper>
+    <ng-template swiperSlide>
+      <div class="swiper-zoom-container" style="height: 250px; width: 100px">
+        <img src="../../assets/icon/{{this.myUrL}}" alt="">
+
+      </div>
+    </ng-template>
+  </swiper>
+  </div>
+  <ion-button (click)="this.speak()">speak</ion-button>
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+
+
+
+  <div class="bd">
+
+
+    <div class="clock">
+
+
+      <div class="time">
+          <span>12</span>
+          <span></span>
+          <span>3</span>
+          <span>6</span>
+          <span>9</span>
+          <span></span>
+      </div>
+
+
+      <div class="hours-container">
+          <div class="hours"></div>
+      </div>
+
+
+      <div class="minutes-container">
+          <div class="minutes"></div>
+      </div>
+
+
+      <div class="seconds-container">
+          <div class="seconds"></div>
+      </div>
+
+  </div>
+
+
+
+
+ 
+
+</div>
+
+<audio id="myAudio">
+  <!-- <source src="horse.ogg" type="audio/ogg"> -->
+  <source src="../../assets/ss.mp3" type="audio/mpeg">
+</audio>
+
+
+<button (click)="playAudio()" id='pp' type="button">Play Audio</button> &nbsp;&nbsp;
+<button (click)="pauseAudio()" type="button">Pause Audio</button> 
+
+
+
+
+
+
+</ion-content>

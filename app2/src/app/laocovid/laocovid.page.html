@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="d-flex justify-content-center">
+      <ion-title>laocovid</ion-title>
+      <img src="{{this.covidList?.countryInfo.flag}}" alt="" style="width: 50px; height:30px; padding-right: 10px;">
+    
+    </div>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <div class="container ml-2 mr-2">
+    <div class="row align-items-center bg-warning">
+      <div class="col">
+        <h4>{{this.covidList?.country}}</h4>
+      </div>
+    </div>
+    
+
+
+    <div class="row align-items-start">
+      <div class="col bg-primary">
+        <h1>Case</h1>
+        <p>{{this.covidList?.cases | number}}</p>
+      </div>
+      <div class="col bg-success">
+        <h1>Active</h1>
+        <p>{{this.covidList?.active | number}}</p>
+      </div>
+      <div class="col bg-danger">
+        <h1>Deaths</h1>
+        <p>{{this.covidList?.deaths | number}}</p>
+      </div>
+    </div>
+
+
+    
+
+
+    <div class="row align-items-end">
+      <div class="col">
+        <h1>Population</h1>
+        <p>{{this.covidList?.population | number}}</p>
+      </div>
+      <div class="col">
+        <h1>Continent</h1>
+        <p>{{this.covidList?.continent}}</p>
+      </div>
+    </div>
+
+
+    <div class="row align-items-center bg-warning">
+      <div class="col text-center">
+        <h4>Today Cases</h4>
+      </div>
+    </div>
+    
+
+    <div class="row align-items-start">
+      <div class="col bg-primary">
+        <h1>Case</h1>
+        <p>{{this.covidList?.todayCases | number}}</p>
+      </div>
+      <div class="col bg-success">
+        <h1>Active</h1>
+        <p>{{this.covidList?.todayRecovered | number}}</p>
+      </div>
+      <div class="col bg-danger">
+        <h1>Deaths</h1>
+        <p>{{this.covidList?.todayDeaths | number}}</p>
+      </div>
+    </div>
+
+  </div>
+
+
+</ion-content>

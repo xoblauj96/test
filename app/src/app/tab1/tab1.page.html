@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-button (click)="takePicture()">takepicture</ion-button>
+  <ion-button (click)="galary()">galary</ion-button> <br>
+  <div style="margin: 30px 100px; line-height: initial; ">
+  
+  <!-- <swiper [config]="config">
+    <img src="{{this.myUrL}}" alt="" srcset="">
+  </swiper> -->
+  <swiper [config]="config" #swiper>
+    <ng-template swiperSlide>
+      <div class="swiper-zoom-container" style="height: 250px; width: 100px">
+        <img src="../../assets/icon/{{this.myUrL}}" alt="">
+
+      </div>
+    </ng-template>
+  </swiper>
+  </div>
+  <ion-button (click)="this.speak()">speak</ion-button>
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+</ion-content>

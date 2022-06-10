@@ -1,0 +1,339 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>homegame</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+
+
+
+<ion-content id="content" fullscreen scroll-y="true">
+  <!-- class="ion-padding" -->
+  <div class="bg" id="bg">
+
+    <!-- Stared Header -->
+    <div class="header">
+
+
+      <div class="header-left">
+
+        <div (click)="switch_page()">
+          <img src="../../assets/setting.png" width="25px" height="25px" alt="" srcset="">
+          <span style="font-size:smaller"></span>
+        </div>
+
+
+        <div>
+          <img src="../../assets/history.png" width="25px" height="25px" alt="" srcset="">
+          <span style="font-size:smaller"></span>
+        </div>
+
+
+        <div>
+          <img src="../../assets/player.png" width="25px" height="25px" alt="" srcset="">
+          <span style="font-size:x-small"> 1,000</span>
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div class="header-right">
+        <div>
+          <img src="../../assets/laab.png" width="25px" height="25px" alt="" srcset="">
+          <span style="font-size:x-small"> 1,000,000,000</span>
+        </div>
+
+        <div>
+          <img src="../../assets/5.png" width="20px" height="20px" alt="" srcset="">
+          <span style="font-size:x-small"> 5</span>
+        </div>
+
+        <div>
+          <img src="../../assets/10.png" width="20px" height="20px" alt="" srcset="">
+          <span style="font-size:x-small"> 10</span>
+        </div>
+
+        <div>
+          <img src="../../assets/20.png" width="20px" height="20px" alt="" srcset="">
+          <span style="font-size:x-small"> 20</span>
+        </div>
+
+        <div>
+          <img src="../../assets/50.png" width="20px" height="20px" alt="" srcset="">
+          <span style="font-size:x-small"> 50</span>
+        </div>
+
+        <div>
+          <img src="../../assets/100.png" width="20px" height="20px" alt="" srcset="">
+          <span style="font-size:x-small"> 100</span>
+        </div>
+      </div>
+
+    </div>
+    <!-- Ended Header -->
+
+
+
+
+
+    <!-- Started Body -->
+    <div class="bd">
+      <div class="cards" *ngFor="let i of [0]">
+
+
+        <div class="card-hearder">
+
+
+          <div class="card-hearder-left">
+            <img src="../../assets/player.png" width="25px" height="25px" alt="" srcset="">
+            <span style="font-size:smaller"> Mahasan Media</span>
+          </div>
+          <div class="card-hearder-right" title="detail">
+            <span style="font-size:x-small"> (100%) </span>
+            <img src="../../assets/ii.png" width="20px" height="20px" alt="" srcset="">
+          </div>
+
+
+        </div>
+
+
+
+        <div class="card-body">
+
+
+          <div class="card-body-row">
+
+            <div class="card-body-left">
+              <img src="../../assets/timeStart.png" width="25px" height="25px" alt="" srcset="">
+              <span style="font-size:smaller"> 27/03/2022 23:55:00</span>
+
+            </div>
+
+
+            <div class="card-body-right">
+              <img src="../../assets/timeEnd.png" width="25px" height="25px" alt="" srcset="">
+              <span style="font-size:smaller"> 30/03/2022 23:55:00</span>
+
+            </div>
+
+          </div>
+
+
+
+
+
+          <div class="card-body-row">
+
+            <div class="card-body-left">
+              <img src="../../assets/userA.png" width="25px" height="25px" alt="" srcset="">
+              <span style="font-size:smaller"> 3</span>
+
+            </div>
+
+
+            <div class="card-body-right">
+              <img src="../../assets/coin2.png" width="25px" height="25px" alt="" srcset="">
+              <span style="font-size:smaller"> 1 :: 75</span>
+
+            </div>
+
+          </div>
+
+
+
+
+          <div class="card-body-row">
+
+            <div class="card-body-left">
+              <img src="../../assets/reward.png" width="25px" height="25px" alt="" srcset="">
+              <span style="font-size:smaller"> 1: {{1015000000*i | number}}</span>
+
+            </div>
+
+
+            <div class="card-body-right">
+              <img src="../../assets/coin.png" width="25px" height="25px" alt="" srcset="">
+              <span style="font-size:smaller"> 0/75</span>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="card-body-row">
+
+            <div class="card-body-left">
+              <img src="../../assets/coin1.png" width="25px" height="25px" alt="" srcset="">
+              <span style="font-size:smaller"> 0/75</span>
+
+            </div>
+
+
+            <div class="card-body-right">
+              <img src="../../assets/user.png" width="25px" height="25px" alt="" srcset="">
+              <span style="font-size:smaller"> +8562095218422</span>
+
+              <ion-chip>
+                <ion-avatar>
+                  <img src="../../assets/user.png" width="10px" height="10px" alt>
+                </ion-avatar>
+                <ion-label>0/0</ion-label>
+                <!-- <ion-icon name="close-circle"></ion-icon> -->
+              </ion-chip>
+            </div>
+
+          </div>
+
+
+
+
+
+          <div class="card-body-row-image">
+           
+           
+
+            <div class="image ">
+              <img src="../../assets/{{i}}.jpeg" alt="" srcset="">
+            </div>
+
+
+            <div class="sub-image">
+                <div class="thumbnail" (click)="setImage('ipLeft.png')">
+                  <img src="../../assets/555.png" alt="" srcset="">
+                  <span style="font-size:x-small"> Winer</span>
+                </div>
+                <div class="thumbnail" (click)="setImage('ipBack.png')">
+                  <img src="../../assets/ipBack.png" alt="" srcset="">
+                  <span style="font-size:x-small"> Product name</span>
+                </div>
+                <div class="thumbnail" (click)="setImage('ipRight.png')">
+                  <img src="../../assets/ipRight.png" alt="" srcset="">
+                  <span style="font-size:x-small"> Price</span>
+                </div>
+                <div class="thumbnail" (click)="setImage('ipFont.png')">
+                  <img src="../../assets/ipFont.png" alt="" srcset="">
+                  <span style="font-size:x-small"> </span>
+                </div>
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+        <!-- {{i}} -->
+
+      </div>
+    </div>
+    <!-- Ended Body -->
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Started Footer -->
+
+  <div class="footer">
+    <div class="footer-left-container " (click)="this.closs_like()">
+      <div class="footer-left" >
+        <div>
+          <img src="../../assets/chat.png" width="20px" height="20px" alt="" srcset="">
+          <span style="font-size:x-small">chat</span>
+        </div>
+        <div>
+          <img src="../../assets/like.png" width="20px" height="20px" alt="" srcset="">
+          <span style="font-size:x-small"> 100</span>
+        </div>
+        <div>
+          <img src="../../assets/dislike.png" width="20px" height="20px" alt="" srcset="">
+          <span style="font-size:x-small"> 10</span>
+        </div>
+
+        <div>
+          <img src="../../assets/dislike.png" width="20px" height="20px" alt="" srcset="">
+          <span style="font-size:x-small"> online</span>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+
+    <div class="footer-right">
+      <div style="background: rgba(12, 10, 10, 0.178); border-radius: 50%; padding: 3px;" (click)="toggle_like()">
+        <img src="../../assets/like.png" width="20px" height="20px" alt="" srcset="">
+        <span style="font-size:smaller"> 100</span>
+      </div>
+      <div style="background: rgba(12, 10, 10, 0.178); border-radius: 50%; padding: 3px;" (click)="pressLike(10)">
+        <img src="../../assets/dislike.png" width="20px" height="20px" alt="" srcset="">
+        <span style="font-size:smaller"> 10</span>
+      </div>
+    </div>
+
+
+
+    <div class="opt">
+      <div (click)="pressLike(1)">
+        <img style="--i:2;" src="../../assets/like.png" width="20px" height="20px" alt="" srcset="">
+        <span style="font-size:smaller">1</span>
+      </div>
+
+
+      <div (click)="pressLike(2)">
+        <img style="--i:5;" src="../../assets/love2.png" width="20px" height="20px" alt="" srcset="">
+        <span style="font-size:smaller">2</span>
+      </div>
+
+
+      <div (click)="pressLike(3)">
+        <img style="--i:2;" src="../../assets/love3.png" width="20px" height="20px" alt="" srcset="">
+        <span style="font-size:smaller">3</span>
+      </div>
+
+
+      <div (click)="pressLike(4)">
+        <img style="--i:3;" src="../../assets/love4.png" width="20px" height="20px" alt="" srcset="">
+        <span style="font-size:smaller">4</span>
+      </div>
+
+
+      <div (click)="pressLike(5)">
+        <img style="--i:1;" src="../../assets/love5.png" width="20px" height="20px" alt="" srcset="">
+        <span style="font-size:smaller">5</span>
+      </div>
+
+
+      <div (click)="pressLike(10)">
+        <img style="--i:2;" src="../../assets/dislike.png" width="20px" height="20px" alt="" srcset="">
+        <span style="font-size:smaller">10</span>
+      </div>
+
+
+      
+    </div>
+  </div>
+  <!-- ended Footer -->
+
+
+  
+
+</ion-content>

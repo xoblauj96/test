@@ -1,0 +1,87 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>homegame</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+
+
+
+<ion-content fullscreen  scroll-y="false">
+  <!-- class="ion-padding" -->
+  <div class="bg">
+    <div class="header">
+      <div class="header-left">
+        <span (click)="switch_page()">setting
+          <!-- <ion-icon name="cog-outline" style="font-size: 25px;"></ion-icon> -->
+        </span>
+        <span>player</span>
+      </div>
+
+
+
+      <div class="header-right">
+        <span>silver</span>
+        <span>gold</span>
+        <span>diamond</span>
+        <span>stone788</span>
+      </div>
+
+    </div>
+  </div>
+
+
+  
+
+<ion-slides  [options]="slideOpts">
+  <ion-slide *ngFor="let i of [10,20,30,40,50,60,70,80]" style="background:rgba(247, 243, 243, 0.014); width: 10px; height: 80vh; border: 1px solid white">
+    <!-- <h1>Slide {{i}}</h1> -->
+
+    <div class="item" >
+      <div class="menu-item item1">1</div>
+      <div class="menu-item item2">2</div>
+      <div class="menu-item item3">3</div>
+      <div class="menu-item item4">4</div>
+    </div>
+  
+  
+    <div class="item-2" >
+      <div class="menu-item2 item1">1</div>
+      <div class="menu-item2 item2">2</div>
+      <div class="menu-item2 item3">3</div>
+      <div class="menu-item2 item4">4</div>
+      <div class="menu-item2 item5">5</div>
+    </div>
+  
+  </ion-slide>
+ 
+</ion-slides>
+
+<!-- ended slide -->
+
+
+
+
+
+  <!-- <div class="bg"> -->
+    <div class="footer">
+      <div class="footer-left">
+        <span>chat</span> 
+        <span>like</span> 
+        <span>dislike</span>
+      </div>
+     
+
+
+
+      <div class="footer-right">
+        <span>silver</span>
+        <span>gold</span>
+        <span>diamond</span>
+      </div>
+
+    </div>
+  <!-- </div> -->
+
+
+</ion-content>
